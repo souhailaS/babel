@@ -638,7 +638,6 @@ jobs:
   test262-prepare:
     name: test262 - Prepare for running in parallel
     runs-on: ubuntu-latest
-    if: github.repository == 'babel/babel'
     steps:
       - name: Checkout Babel
         uses: actions/checkout@v4
@@ -783,7 +782,6 @@ jobs:
   test262-babel8:
     name: test262 - Babel 8
     runs-on: ubuntu-latest
-    if: github.repository == 'babel/babel'
     needs: [build-babel8]
     steps:
       - name: Checkout Babel
